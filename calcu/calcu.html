@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator </title>
+    <script src="src/function.js"></script>
+    <body>
+        <title> javascript: calculator two numbers</title>
+        <meta charset="windows=1252">
+        <meta name="viewport" content="width=device=width, initial-scale-1.0">
+
+
+        <body>
+            <h1>Calculator</h1>
+            <div class="container">
+        <label class="num" for="n1">Number 1:</label>
+        <input type="text" id="n1"><br/><br/>
+        <label class="num" for="n2">Number 2:</label>
+        <input type="text" id="n2"><br/><br/>
+
+        <select id="operators">
+            <option value="%">%</option>
+            <option value="^">^</option>
+            <option value="X">X</option>
+            <option value="/">/</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+        </select>
+        <button onclick="calc();">=</button>
+        <input class= "result" type="text" id="result"/>
+    </body>
+    <script>
+            
+        function calc()
+        {
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            var oper = document.getElementById('operators').value;
+            if(oper === '%')
+            {
+                document.getElementById('result').value = n1 % n2;
+            }
+            if(oper === '^')
+            {
+                document.getElementById('result').value = n1**n2;
+            }
+            if(oper === 'X')    
+            {
+                document.getElementById('result').value = n1*n2;
+            }
+
+            if(oper === '/')
+            {
+                document.getElementById('result').value = n1/n2;
+            }
+
+            if(oper === '+')
+            {
+                document.getElementById('result').value = n1+n2;
+            }
+
+            if(oper === '-')
+            {
+                document.getElementById('result').value = n1-n2;
+            }
+        }
+        
+
+    </script>
+    <style>
+        h1 {  
+            text-align: center;  
+            padding: 23px;  
+            background-color: red;  
+            color: black;  
+            }  
+        body{
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+            .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }   
+            .num{
+            color: black;
+            font-size: 17.5px;
+            padding: 19px;
+            border-radius: 17px;
+            width: 90px;
+            margin: 6px;
+            border: 3px solid;
+            background-color: aqua;
+
+            }
+            input{
+            font-size: 18px;
+            padding: 17px;
+            border-radius: 15px;
+            width: 75px;
+            margin: 6px;
+            border: 3px solid;
+            border-color: purple;
+            }
+            .operators{
+                text-align: center;
+                border-color: lightsalmon;
+                width: 10%;
+                font-size: 25px;
+                border-radius: 30px;
+                padding: 10px;
+                margin: 10px;
+            }
+            .function{
+                text-align: center;
+                border-color: lightsalmon;
+                width: 7%;
+                font-size: 25px;
+                border-radius: 30px;
+                padding: 7px;
+                margin: 10px;
+            }
+            
+            button{
+            text-align: center;
+            border-color: lightsalmon;
+            width: 7%;
+            font-size: 28px;
+            border-radius: 17px;
+            padding: 8.5px;
+            margin: 9px;
+            }
+            .result{
+            text-align: center;
+            width: 35%;;
+            font-size: 25px;
+            padding: 10px;
+            margin-top: 30px;
+            border-radius: 20px;
+            border: 3px solid;
+            border-color: maroon;
+            }
+           
+    </style>
+   
+    </html>
